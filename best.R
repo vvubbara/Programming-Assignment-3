@@ -4,7 +4,13 @@ best <- function(state, outcome) {
   hospital_data <- read.csv("outcome-of-care-measures.csv", sep = ",") 
   
   ## Checks that state and outcome are valid 
-  valid_states <- c("AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA", "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY") 
+  valid_states <- c("AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", 
+                    "FL", "GA", "HI", "ID", "IL", "IN", "IA", "KS", 
+                    "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", 
+                    "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY", 
+                    "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC", 
+                    "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", 
+                    "WI", "WY") 
   valid_outcomes <- c("heart attack", "heart failure", "pneumonia") 
   if (!is.element(state, valid_states)) stop("invalid state") 
   if (!is.element(outcome, valid_outcomes)) stop("invalid outcome") 

@@ -4,7 +4,13 @@ rankall <- function(outcome, num = "best") {
   hospital_data <- read.csv("outcome-of-care-measures.csv", sep = ",")
   
   ## Check that the states and outcome are valid
-  valid_states <- c("AK", "AL", "AR", "AZ", "CA", "CO", "CT", "DE", "FL", "GA", "HI", "IA", "ID", "IL", "IN", "KS", "KY", "LA", "MA", "MD", "ME", "MI", "MN", "MO", "MS", "MT", "NC", "ND", "NE", "NH", "NJ", "NM", "NV", "NY", "OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VA", "VT", "WA", "WI", "WV", "WY")
+  valid_states <- c("AK", "AL", "AR", "AZ", "CA", "CO", "CT", "DE", 
+                    "FL", "GA", "HI", "IA", "ID", "IL", "IN", "KS", 
+                    "KY", "LA", "MA", "MD", "ME", "MI", "MN", "MO", 
+                    "MS", "MT", "NC", "ND", "NE", "NH", "NJ", "NM", 
+                    "NV", "NY", "OH", "OK", "OR", "PA", "RI", "SC", 
+                    "SD", "TN", "TX", "UT", "VA", "VT", "WA", "WI", 
+                    "WV", "WY")
   valid_outcomes <- c("heart attack", "heart failure", "pneumonia")
   if (!is.element(outcome, valid_outcomes)) stop("invalid outcome")
   
